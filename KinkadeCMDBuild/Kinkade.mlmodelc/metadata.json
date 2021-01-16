@@ -1,0 +1,74 @@
+[
+  {
+    "shortDescription" : "",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "height" : "512",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "512",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 512 × 512)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "Stylized image",
+        "name" : "stylizedImage"
+      }
+    ],
+    "version" : "",
+    "modelParameters" : [
+
+    ],
+    "author" : "Evan Putnam",
+    "specificationVersion" : 4,
+    "license" : "",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "10.15",
+      "tvOS" : "13.0",
+      "watchOS" : "6.0",
+      "iOS" : "13.0",
+      "macCatalyst" : "13.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_neuralNetwork"
+    },
+    "inputSchema" : [
+      {
+        "height" : "512",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "512",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 512 × 512)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "Input image",
+        "name" : "image"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "Algorithm" : "cnn",
+      "com.apple.coreml.model.preview.type" : "styleTransfer",
+      "com.apple.createml.version" : "11.0.1",
+      "com.apple.coreml.model.preview.params" : "image",
+      "com.apple.createml.app.tag" : "53.1",
+      "Textel Density" : "448",
+      "com.apple.createml.app.version" : "2.0",
+      "Style Strength" : "5"
+    },
+    "generatedClassName" : "Kinkade",
+    "neuralNetworkLayerTypeHistogram" : {
+      "UpsampleNearestNeighbor" : 2,
+      "PaddingReflection" : 16,
+      "ActivationReLU" : 10,
+      "Scale" : 1,
+      "Add" : 5,
+      "Convolution" : 16,
+      "ActivationSigmoid" : 1,
+      "InstanceBatchNorm" : 15
+    },
+    "method" : "predict"
+  }
+]

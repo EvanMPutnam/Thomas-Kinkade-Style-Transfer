@@ -1,0 +1,39 @@
+
+<!doctype html>
+
+{% if invalid_upload == true %}
+<script>
+alert('Error: Invalid files or none uploaded.')
+</script>
+{% endif %}
+
+<style>
+    .center {
+      margin: auto;
+      width: 60%;
+      padding: 10px;
+    }
+</style>
+
+<title>Kinkade-ify</title>
+
+<div class = "center">
+    <h1>Kinkade-ify</h1>
+    <p>
+        This application takes an image and applies a style transfer algorithm to it and transforms it to look as if it were a Thomas Kinkade photo.
+
+        Here is an example with a photograph I took in Italy.
+    </p>
+    <h3>Input</h3>
+    <img src="{{url_for('static', filename='italy.jpg')}}" align="middle" width="50%"/>
+    <h3>Output</h3>
+    <img src="{{url_for('static', filename='italyOut.png')}}" align="middle" width="50%"/>
+        
+    <h1>Upload Your File</h1>
+    <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <br>
+        <input type=submit value=Upload>
+    </form>
+</div>
+
